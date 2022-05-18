@@ -1529,3 +1529,36 @@ releases:
           - el8: kernel-4.18.0-305.48.1.el8_4
             why: "https://bugzilla.redhat.com/show_bug.cgi?id=2080072"
             non_gc_tag: "rhel team has signed this kernel"
+  art2675:
+    assembly:
+      type: custom
+      members:
+        images:
+        - distgit_key: 'openshift-enterprise-console'
+          why: Test Cachito yarn integration
+          metadata:
+            content:
+              source:
+                git:
+                  url: https://github.com/vfreex/console.git
+                pkg_managers:
+                - gomod
+                - yarn
+                artifacts!:
+                  from_urls:
+                  - target: yarn-v1.22.19.tar.gz
+                    url: http://download.eng.bos.redhat.com/rcm-guest/puddles/RHAOS/artifacts/build-deps/yarn-v1.22.19.tar.gz
+                    sha256: 732620bac8b1690d507274f025f3c6cfdc3627a84d9642e38a07452cc00e0f2e
+                    source-url: http://download.eng.bos.redhat.com/rcm-guest/puddles/RHAOS/artifacts/build-deps/yarn-source-v1.22.19.tar.gz
+                    source-sha256: 50af0025d2ef942bf3e6cdd0587dc9c4dd8d6e6e69501b84935d09f2b2b5de8b
+                  - target: node-v14.16.0-headers.tar.gz
+                    url: http://download.eng.bos.redhat.com/rcm-guest/puddles/RHAOS/artifacts/build-deps/node-v14.16.0-headers.tar.gz
+                    sha256: 4b44b92903a61c29af20550f9d25bfc3029657df6b5f0a12072a70360f7eedee
+                    source-url: http://download.eng.bos.redhat.com/rcm-guest/puddles/RHAOS/artifacts/build-deps/yarn-source-v1.22.19.tar.gz
+                    source-sha256: 50af0025d2ef942bf3e6cdd0587dc9c4dd8d6e6e69501b84935d09f2b2b5de8b
+                modifications!: []
+            cachito:
+              enabled: true
+              packages:
+                yarn:
+                - path: frontend
