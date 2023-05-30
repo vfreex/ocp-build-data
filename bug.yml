@@ -17,6 +17,21 @@ version:
   - "4.10"
   - "4.10.z"
 
+kernel_bug_sweep:
+  tracker_jira:
+    project: KMAINT
+    labels:
+    - early-kernel-track
+  bugzilla:
+    target_releases:
+    - 8.4.0
+  target_jira:
+    project: OCPBUGS
+    version: "{MAJOR}.{MINOR}"
+    target_release: "{MAJOR}.{MINOR}.z"
+    candidate_brew_tag: "rhaos-{MAJOR}.{MINOR}-rhel-8-candidate"
+    prod_brew_tag: "rhaos-{MAJOR}.{MINOR}-rhel-8"
+
 # List of OCP components for which advisories are not maintained by ART
 # to be ignored when looking for bugs to be attached to OCP advisories
 filters:
