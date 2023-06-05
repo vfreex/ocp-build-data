@@ -9,8 +9,10 @@ content:
 distgit:
   branch: rhaos-4.3-rhel-8
 enabled_repos:
+- rhel-8-golang-rpms
 - rhel-8-server-ose-build-rpms
-- rhel-8-newer-golang-rpms
+- rhel-8-baseos-rpms
+- rhel-8-appstream-rpms
 
 from:
   stream: rhel8
@@ -23,8 +25,8 @@ name: openshift/golang-builder
 owners:
 - aos-team-art@redhat.com
 
-additional_tags:
-- 'rhel_8_golang_1.12'
-- 'rhel_8_1.12'
+# additional_tags:
+# - 'rhel_8_golang_1.12'
+# - 'rhel_8_1.12'
 maintainer:
   component: Release

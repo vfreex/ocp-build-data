@@ -1,4 +1,4 @@
-FROM rhel-els:8.2-23
+FROM rhel/els:8.2-23
 
 ENV SUMMARY="RHEL8 based Go builder image for OpenShift ART" \
     container=oci \
@@ -18,4 +18,3 @@ RUN yum install -y --setopt=tsflags=nodocs \
     "go-toolset-$VERSION.*" goversioninfo openssl openssl-devel systemd-devel gpgme-devel libassuan-devel && \
     mkdir -p /go/src && \
     yum clean all -y
-
