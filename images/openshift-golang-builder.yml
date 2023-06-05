@@ -6,7 +6,7 @@ content:
     git:
       branch:
         target: golang-1.11
-      url: git@github.com:openshift/ocp-build-data.git
+      url: git@github.com:vfreex/ocp-build-data.git
 distgit:
   branch: rhaos-4.1-rhel-7
 enabled_repos:
@@ -37,7 +37,7 @@ push:
 # Tag in osbs for consumption by various streams.yml
 additional_tags:
 - '1.11'
-- 'rhel_golang_1.11'
-- 'rhel_7_golang_1.11'
+# - 'rhel_golang_1.11'
+# - 'rhel_7_golang_1.11'
 maintainer:
   component: Release
