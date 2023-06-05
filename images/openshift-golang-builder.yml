@@ -5,7 +5,7 @@ content:
     git:
       branch:
         target: rhel-8-golang-1.12
-      url: git@github.com:openshift/ocp-build-data.git
+      url: git@github.com:vfreex/ocp-build-data.git
 distgit:
   branch: rhaos-4.3-rhel-8
 enabled_repos:
@@ -16,12 +16,9 @@ enabled_repos:
 
 from:
   stream: rhel8
-
 labels:
   io.k8s.description: golang builder image for Red Hat internal builds
-
 name: openshift/golang-builder
-
 owners:
 - aos-team-art@redhat.com
 
@@ -30,3 +27,4 @@ owners:
 # - 'rhel_8_1.12'
 maintainer:
   component: Release
+image_build_method: osbs2
