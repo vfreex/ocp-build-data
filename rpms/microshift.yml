@@ -8,7 +8,8 @@ content:
   source:
     git:
       branch:
-        target: release-{MAJOR}.{MINOR}
+        # target: release-{MAJOR}.{MINOR}
+        target: main
       url: git@github.com:openshift-priv/microshift.git
     specfile: packaging/rpm/microshift.spec
     modifications:
