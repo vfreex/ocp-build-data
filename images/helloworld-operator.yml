@@ -1,4 +1,3 @@
-mode: disabled  # This operator is for internal testing only
 content:
   source:
     dockerfile: Dockerfile
