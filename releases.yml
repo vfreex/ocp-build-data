@@ -3,6 +3,7 @@ releases:
     assembly:
       type: candidate
       basis:
+        assembly: rc.0
         time: "2025-09-08T17:29:02+00:00"
         reference_releases:
           x86_64: 4.20.0-0.nightly-2025-09-08-182033
