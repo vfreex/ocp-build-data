@@ -5,6 +5,7 @@ content:
       branch:
         target: release-{MAJOR}.{MINOR}
       url: git@github.com:openshift-priv/ansible-operator-plugins.git
+      url_pull: git@github.com:vfreex/ansible-operator-plugins.git
       web: https://github.com/openshift/ansible-operator-plugins
     ci_alignment:
       streams_prs:
@@ -52,21 +53,4 @@ owners:
 - ckyal@redhat.com
 - arsen@redhat.com
 konflux:
-  cachi2:
-    lockfile:
-      rpms:
-      - binutils
-      - binutils-gold
-      - cpp
-      - elfutils-debuginfod-client
-      - gcc
-      - glibc-devel
-      - glibc-headers
-      - kernel-headers
-      - libmpc
-      - libxcrypt-devel
-      - glibc
-      - make
-      - libasan
-      - libatomic
-      - libubsan
+  network_mode: open
