@@ -8,7 +8,7 @@ content:
   source:
     git:
       branch:
-        target: release-{MAJOR}.{MINOR}
+        target: 763e10c0acb743097f77fe7b716098b4f695b43f
       url: git@github.com:openshift-priv/microshift.git
       web: https://github.com/openshift/microshift
     specfile: packaging/rpm/microshift.spec
