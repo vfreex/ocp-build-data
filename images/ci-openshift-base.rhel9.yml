@@ -5,7 +5,7 @@ content:
     dockerfile: ci_images/rhel-9/ci-openshift-base/Dockerfile
     git:
       branch:
-        target: openshift-{MAJOR}.{MINOR}
+        target: openshift-4.22
       url: git@github.com:openshift-priv/ocp-build-data.git
       web: https://github.com/openshift-eng/ocp-build-data
     ci_alignment:
